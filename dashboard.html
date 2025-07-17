@@ -7,9 +7,43 @@
   <link rel="stylesheet" href="/css/shared.css">
 </head>
 <body>
-  <main>
-    <h1>Dashboard</h1>
-  </main>
+  <button class="menu-toggle"><span class="material-icons">menu</span></button>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <h2>Menu</h2>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-group">
+        <div class="sidebar-group-title">
+          Painel Administrativo <span class="material-icons">arrow_drop_down</span>
+        </div>
+        <div class="sidebar-group-content">
+          <a href="/dashboard.html"><span class="material-icons">dashboard</span> Dashboard</a>
+          <a href="/admin.html"><span class="material-icons">settings</span> Admin</a>
+        </div>
+      </div>
+      <div class="sidebar-group">
+        <div class="sidebar-group-title">
+          Cadastros <span class="material-icons">arrow_drop_down</span>
+        </div>
+        <div class="sidebar-group-content">
+          <a href="/cadastro_obras.html"><span class="material-icons">construction</span> Obras</a>
+          <a href="/cadastro_usuarios.html"><span class="material-icons">person</span> Usuários</a>
+          <a href="/cadastro_empreiteiros.html"><span class="material-icons">business</span> Empreiteiros</a>
+          <a href="/cadastro_locais.html"><span class="material-icons">location_on</span> Locais de Aplicação</a>
+        </div>
+      </div>
+      <!-- Add more groups as needed -->
+    </nav>
+  </aside>
+
+  <div id="main-content">
+    <main>
+      <h1>Dashboard</h1>
+      <!-- Content for the dashboard will go here -->
+    </main>
+  </div>
+
   <script src="/js/main.js"></script>
 </body>
 </html>
