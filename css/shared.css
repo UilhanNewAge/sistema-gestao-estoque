@@ -1,0 +1,122 @@
+:root {
+    --background-color: #1a1a2e; /* Azul escuro */
+    --text-color: #e0e0e0; /* Cinza claro */
+    --primary-color: #0f3460; /* Azul primário */
+    --accent-color: #e94560; /* Rosa vibrante */
+    --sidebar-width: 250px;
+    --sidebar-bg-color: #16213e; /* Azul um pouco mais claro que o fundo */
+    --sidebar-link-hover: #0f3460;
+    --font-family: 'Roboto', sans-serif; /* Uma fonte moderna */
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex; /* Para acomodar a sidebar e o conteúdo principal */
+}
+
+/* Basic sidebar structure */
+#sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-bg-color);
+    color: var(--text-color);
+    height: 100vh; /* Altura total da viewport */
+    position: fixed; /* Sidebar fixa */
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+#main-content {
+    margin-left: var(--sidebar-width); /* Espaço para a sidebar */
+    flex-grow: 1; /* Ocupa o restante do espaço */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Sidebar Navigation Links */
+#sidebar a {
+    display: block; /* Faz o link ocupar toda a largura */
+    padding: 10px 20px;
+    text-decoration: none; /* Remove sublinhado */
+    color: var(--text-color); /* Cor do texto dos links */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+#sidebar a:hover {
+    background-color: var(--sidebar-link-hover); /* Cor de fundo ao passar o mouse */
+}
+
+/* Sidebar Grouping */
+.sidebar-group {
+ position: relative; /* Para posicionar o ícone */
+}
+
+.sidebar-group-title {
+ display: flex;
+ align-items: center;
+ padding: 10px 20px;
+ cursor: pointer; /* Indica que é clicável */
+ user-select: none; /* Previne seleção de texto */
+ background-color: #2c3e50; /* Cor um pouco diferente para o título do grupo */
+ margin-bottom: 5px;
+ transition: background-color 0.3s ease;
+}
+
+.sidebar-group-title:hover {
+ background-color: #34495e;
+}
+
+.sidebar-group-title .material-icons {
+ margin-left: auto; /* Empurra o ícone para a direita */
+ transition: transform 0.3s ease; /* Para animar a rotação do ícone */
+}
+
+/* Styles for collapsible content */
+.sidebar-group-content {
+ overflow: hidden; /* Para esconder o conteúdo quando recolhido */
+ transition: max-height 0.5s ease-in-out; /* Animação de altura */
+}
+
+.sidebar-group-content a {
+ padding-left: 30px; /* Indenta os links dentro do grupo */
+}
+
+.sidebar-group-title .material-icons {
+ margin-left: auto; /* Empurra o ícone para a direita */
+ transition: transform 0.3s ease; /* Para animar a rotação do ícone */
+}
+/* Estilos para tornar a sidebar responsiva */
+@media (max-width: 768px) {
+    #sidebar {
+        left: -var(--sidebar-width); /* Oculta a sidebar para a esquerda */
+        transition: left 0.3s ease-in-out; /* Adiciona transição para a animação */
+    }
+
+    #sidebar.open {
+        left: 0; /* Mostra a sidebar quando a classe 'open' está presente */
+    }
+
+    main {
+        margin-left: 0; /* Remove a margem esquerda do conteúdo principal em telas pequenas */
+    }
+
+    /* Estilo básico para o botão que irá abrir/fechar a sidebar */
+    .menu-toggle {
+        display: block; /* Mostra o botão em telas pequenas */
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+}

@@ -8,38 +8,38 @@
     <link rel="stylesheet" href="css/shared.css">
 </head>
 <body>
-    <button class="menu-toggle"><span class="material-icons">menu</span></button>
-    <div id="sidebar">
-        <h2>Menu</h2>
-        <div class="sidebar-group">
-            <div class="sidebar-group-title">
-                Painel Administrativo
-                <span class="material-icons">expand_more</span>
+    <div class="container">
+        <button class="menu-toggle"><span class="material-icons">menu</span></button>
+        <div id="sidebar">
+            <h2>Menu</h2>
+            <div class="sidebar-group">
+                <div class="sidebar-group-title">
+                    Painel Administrativo
+                    <span class="material-icons">expand_more</span>
+                </div>
+                <div class="sidebar-group-content">
+                    <a href="/sistema-gestao-estoque/dashboard.html"><span class="material-icons">dashboard</span> Dashboard</a>
+                    <a href="/sistema-gestao-estoque/admin.html"><span class="material-icons">admin_panel_settings</span> Admin</a>
+                </div>
             </div>
-            <div class="sidebar-group-content">
-                <a href="/dashboard.html"><span class="material-icons">dashboard</span> Dashboard</a>
-                <a href="/admin.html"><span class="material-icons">admin_panel_settings</span> Admin</a>
+            <div class="sidebar-group">
+                <div class="sidebar-group-title">
+                    Cadastros
+                    <span class="material-icons">expand_more</span>
+                </div>
+                <div class="sidebar-group-content">
+                    <a href="/sistema-gestao-estoque/cadastro_obras.html"><span class="material-icons">construction</span> Obras</a>
+                    <a href="/sistema-gestao-estoque/cadastro_usuarios.html"><span class="material-icons">people</span> Usuários</a>
+                    <a href="/sistema-gestao-estoque/cadastro_empreiteiros.html"><span class="material-icons">engineering</span> Empreiteiros</a>
+                    <a href="/sistema-gestao-estoque/cadastro_locais.html"><span class="material-icons">place</span> Locais de Aplicação</a>
+                </div>
             </div>
         </div>
-        <div class="sidebar-group">
-            <div class="sidebar-group-title">
-                Cadastros
-                <span class="material-icons">expand_more</span>
-            </div>
-            <div class="sidebar-group-content">
-                <a href="/cadastro_obras.html"><span class="material-icons">construction</span> Obras</a>
-                <a href="/cadastro_usuarios.html"><span class="material-icons">people</span> Usuários</a>
-                <a href="/cadastro_empreiteiros.html"><span class="material-icons">engineering</span> Empreiteiros</a>
-                <a href="/cadastro_locais.html"><span class="material-icons">place</span> Locais de Aplicação</a>
-            </div>
-        </div>
-        <!-- Adicionar outros grupos aqui -->
+        <main id="main-content">
+            <h1>Cadastro de Empreiteiros</h1>
+            <!-- Content for Empreiteiro registration will go here -->
+        </main>
     </div>
-
-    <main id="main-content">
-        <h1>Cadastro de Empreiteiros</h1>
-        <!-- Content for Empreiteiro registration will go here -->
-    </main>
-    <script src="/js/main.js"></script>
+    <script src="/sistema-gestao-estoque/js/main.js"></script>
 </body>
 </html>
